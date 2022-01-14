@@ -1,20 +1,58 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calcul IMC
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ 
+<!--
+  <ion-item lines="full">
+     <ion-label position="floating" placeholder="votre poids">aa</ion-label>
+    <ion-input ([ngModel)] = "poids" required></ion-input>
+  </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item lines="full">
+    <ion-label position="floating" placeholder="votre taille">aa</ion-label>
+   <ion-input ([ngModel)] = "taille"  required></ion-input>
+ </ion-item>
+ 
+ <ion-button color="success"  (click)="onCalculer()" > Calculer </ion-button>
+ <div 
+        [ngClass]="{
+          'alert-success':tranche === 'normale',
+          'alert-warning':tranche === 'maigreur',
+          'alert-danger':tranche === 'surpoids'
+        }"
+        class="alert mt-3" role="alert">
+          
+            <h1 class="h4">{{imc}}</h1>
+            <h2>{{tranche}}</h2>
+        </div>
+-->
+  
+                    
+      <ion-item>
+        <ion-label position="floating" placeholder="votre taille">Votre poids</ion-label>
+        <ion-input   [(ngModel)]="poids"  aria-describedby="poids" placeholder="votre poids" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" placeholder="votre taille">Votre taille</ion-label>
+        <ion-input   [(ngModel)]="taille"  aria-describedby="poids" placeholder="votre taille" required></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="onCalculer()" type="submit" expand="block" > Calculer</ion-button>
+        </ion-col>
+      </ion-row>
+
+     
+
+     
+       
+
+ 
 </ion-content>
