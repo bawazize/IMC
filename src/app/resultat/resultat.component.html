@@ -9,50 +9,49 @@
 <ion-content fullscreen="true">
 
   <ion-button [routerLink]="['/home']" color="primary">
-  <ion-icon name="arrow-back-outline"></ion-icon>
-</ion-button>
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-button>
 
-<ion-card
-  *ngIf="tranche == 'normal'"
-  color="success"
->
-     <ion-card-header>
+  <ion-card *ngIf="tranche == 'normal'" color="success">
+    <ion-card-header>
       <ion-card-title>Votre IMC est{{imc}}</ion-card-title>
 
       <ion-card-title> votre poids {{tranche}}</ion-card-title>
-     </ion-card-header>   
-  
+    </ion-card-header>
 
-</ion-card>
-<ion-card
-  *ngIf="tranche == 'maigreur'"
-  color="warning"
->
-<ion-card-header>
-  <ion-card-title> Votre IMC est {{imc}}</ion-card-title>
 
-  <ion-card-title> Vous etes en {{tranche}}</ion-card-title>
-</ion-card-header>
-  
-  <ion-card-title> votre poids normal doit etre :{{poidsIdeal}} kg min</ion-card-title>
-  <ion-card-content>Nous Vous conseillons notre programme de prise du poids </ion-card-content>
-</ion-card>
+  </ion-card>
+  <ion-card *ngIf="tranche == 'maigreur'" color="warning">
+    <ion-card-header>
+      <ion-card-title> Votre IMC est {{imc}}</ion-card-title>
 
-<ion-card
-  *ngIf="tranche == 'surpoids'"
-  color="danger"
->
-<ion-card-header>
-  <ion-card-title>Votre IMC est {{imc}}</ion-card-title>
+      <ion-card-title> Vous etes en {{tranche}}</ion-card-title>
+      <ion-card-title> votre poids normal doit etre :{{poidsIdeal}} kg min</ion-card-title>
+    </ion-card-header>
 
-  <ion-card-title> Vous etes en{{tranche}}</ion-card-title>
-  <ion-card-title> votre poids normal :{{poidsIdeal}} Kg max</ion-card-title>
-</ion-card-header>
-<ion-card>
-  <ion-card-content>Nous Vous conseillons notre programme de perte du poids </ion-card-content>
-  <ion-button href="https://www.onatera.com/produit-perte-de-poids-3-en-1-21-unicadoses-orfito,16726.html" color="primary">
-    clicck ici pour avoir la promo
-  </ion-button>
-</ion-card>
-</ion-card>
+    <ion-card>
+      <ion-card-content>Nous Vous conseillons notre programme de prise du poids </ion-card-content>
+      <ion-button href="https://www.onatera.com/produit-perte-de-poids-3-en-1-21-unicadoses-orfito,16726.html"
+        color="primary">
+        click ici pour avoir la promo
+      </ion-button>
+    </ion-card>
+
+  </ion-card>
+
+  <ion-card *ngIf="tranche == 'surpoids'" color="danger">
+    <ion-card-header>
+      <ion-card-title>Votre IMC est {{imc}}</ion-card-title>
+
+      <ion-card-title> Vous etes en{{tranche}}</ion-card-title>
+      <ion-card-title> votre poids normal :{{poidsIdeal}} Kg max</ion-card-title>
+    </ion-card-header>
+    <ion-card>
+      <ion-card-content>Nous Vous conseillons notre programme de perte du poids </ion-card-content>
+      <ion-button href="https://www.onatera.com/produit-perte-de-poids-3-en-1-21-unicadoses-orfito,16726.html"
+        color="primary">
+        click ici pour avoir la promo
+      </ion-button>
+    </ion-card>
+  </ion-card>
 </ion-content>
